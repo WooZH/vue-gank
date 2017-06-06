@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/*
+  公用的颜色和长度等单位 minxin function等 放在这里, 每个组件的scss文件都可以引用,不会被打包进最终的css
+*/
+/*
+  px 转换 rem
+*/
+/*
+  根据屏幕dpr改变字体大小
+*/
+/*
+  根据不同dpr切换不同清晰度图片 常规 2x 和 3x
+*/
+
+/*# sourceMappingURL=common.css.map */
