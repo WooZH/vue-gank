@@ -51,19 +51,28 @@ html {
 .about {
   padding: 0.66667rem;
   margin-top: 0.26667rem;
-  text-align: left;
+  text-align: center;
   font-size: 14px;
   line-height: 150%; }
   .about .title {
     font-size: 120%; }
 
+.href_a {
+  color: #2aba88;
+  text-decoration: none; }
+
 .backHome {
-  width: 1.06667rem;
-  height: 1.06667rem;
-  border-radius: 50%;
   position: fixed;
-  bottom: 0.26667rem;
-  color: #ffffff;
-  background-color: rgba(51, 51, 51, 0.7); }
+  right: 1.06667rem;
+  bottom: 1.6rem;
+  width: 1.33333rem;
+  height: 1.33333rem;
+  border-radius: 50%;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+  background-color: #2aba88;
+  font-size: 14px;
+  line-height: 1.33333rem;
+  text-align: center;
+  color: #ffffff; }
 
 /*# sourceMappingURL=about.css.map */

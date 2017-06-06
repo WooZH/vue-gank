@@ -10,7 +10,7 @@ $theme-color: #2aba88;
 .about {
   padding: px2rem(50px);
   margin-top: px2rem(20px);
-  text-align: left;
+  text-align: center;
   font-size: 14px;
   line-height: 150%;
   .title {
@@ -18,17 +18,28 @@ $theme-color: #2aba88;
   }
 }
 
+.href_a{
+  color: #2aba88;
+  text-decoration: none;
+}
+
 .backHome{
-  width: px2rem(80px);
-  height: px2rem(80px);
+  position: fixed;
+
+  right: px2rem(80px);
+  bottom: px2rem(120px);
+
+  width: px2rem(100px);
+  height: px2rem(100px);
 
   border-radius: 50%;
+  box-shadow: 0 -1px 0 #e0e0e0,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
 
-  position: fixed;
-  bottom: px2rem(20px);
+  background-color: #2aba88;
 
+  font-size: 14px;
+  line-height: px2rem(100px);
+  text-align: center;
   color: #ffffff;
-
-  background-color: rgba(51, 51, 51, 0.7);
 
 }

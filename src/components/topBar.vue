@@ -2,6 +2,8 @@
   <div class="top-bar">
     <p class="top-title">
       <span @click="goHome">{{title}}</span>
+
+      <span v-if="date" class="date">{{date}} </span>
       <span class="about" @click="goAbout">♕</span>
     </p>
   </div>
@@ -15,6 +17,7 @@
         title: 'Gank Daily'
       }
     },
+    props: ['date','count'],
     methods: {
       goAbout: function () {
         this.$router.push({
@@ -60,5 +63,9 @@
       color: #ffffff;
       margin-right: px2rem(5px);
     }
+  }
+
+  .date{
+    font-size: 12px;
   }
 </style>
