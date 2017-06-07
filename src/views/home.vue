@@ -11,7 +11,7 @@
     <transition name="upFade">
       <div class="topTip" v-if="!isToday">今日暂无数据, 已显示{{dateTime.year}}-{{dateTime.month}}-{{dateTime.day}}的数据</div>
     </transition>
-    <ul>
+    <ul id="mainUl">
       <li class="card" v-for="(item,key) in homeData.results">
 
         <div class="card-title">{{key}}</div>
@@ -37,10 +37,10 @@
     </ul>
     <transition name="transX">
 
-    <div class="toolbar" @click="clickDateBtn" v-show="isToolbar">
-      <p>{{selectedDate}}</p>
-    </div>
-      </transition>
+      <div class="toolbar" @click="clickDateBtn" v-show="isToolbar">
+        <p>{{selectedDate}}</p>
+      </div>
+    </transition>
     <input id="selectDate" class="hidden dateInput" type="date" v-model="selectedDate">
 
     <transition name="up">
@@ -123,7 +123,7 @@
 //          未获取到数据
             if (this.homeData.category.length < 1) {
               this.isToday = false;
-              this.setYesterDay(this.dateTime.year,this.dateTime.month,this.dateTime.day)
+              this.setYesterDay(this.dateTime.year, this.dateTime.month, this.dateTime.day)
               this.getInfo();
             }
 //        隐藏加载
@@ -156,49 +156,48 @@
         this.dateTime.month = date.getMonth() + 1;
         this.dateTime.day = date.getDate();
 
-        this.setShowDate(this.dateTime.year,this.dateTime.month,this.dateTime.day);
+        this.setShowDate(this.dateTime.year, this.dateTime.month, this.dateTime.day);
       },
-      setYesterDay: function (year,month,day) {
-        if(month == 1 && day == 1){
+      setYesterDay: function (year, month, day) {
+        if (month == 1 && day == 1) {
           this.dateTime.year--;
           this.dateTime.month = 12;
           this.dateTime.day = 31
         }
-        else
-        {
-          if(day == 1){
-            if(month == 2 ||month == 4 ||month == 8 ||month == 9 ||month == 11){
+        else {
+          if (day == 1) {
+            if (month == 2 || month == 4 || month == 8 || month == 9 || month == 11) {
               this.dateTime.month--;
               this.dateTime.day = 31
 
             }
-            else if(month == 3){
-              if(year%4==0 ||year%400==0){
+            else if (month == 3) {
+              if (year % 4 == 0 || year % 400 == 0) {
                 this.dateTime.month--;
                 this.dateTime.day = 29
 
-              }else{
+              } else {
                 this.dateTime.month--;
 
                 this.dateTime.day = 28
 
               }
             }
-            else{
+            else {
               this.dateTime.month--;
               this.dateTime.day = 30
             }
           }
-          else{
+          else {
             this.dateTime.day--
           }
         }
 
-        this.setShowDate(this.dateTime.year,this.dateTime.month,this.dateTime.day);
+        this.setShowDate(this.dateTime.year, this.dateTime.month, this.dateTime.day);
 
       },
-      setShowDate: function (year,month,day){
-        var showMonth,showDay;
+      setShowDate: function (year, month, day) {
+        var showMonth, showDay;
         if (month < 10 && month.length < 2)
           showMonth = '0' + month;
         else
@@ -236,6 +235,13 @@
       }
     },
     mounted: function () {
+      self = this;
+      PullToRefresh.init({
+        mainElement: '#mainUl',
+        onRefresh: function () {
+          self.getInfo();
+        }
+      });
 //      replace ready
 
 //      函数节流

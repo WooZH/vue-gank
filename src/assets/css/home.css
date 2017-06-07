@@ -208,4 +208,7 @@ html {
   position: relative;
   top: 0rem; }
 
+.ptr--ptr {
+  box-shadow: 0 !important; }
+
 /*# sourceMappingURL=home.css.map */

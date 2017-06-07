@@ -12,6 +12,9 @@ export default {
   name: 'app',
   components: {
     Home
+  },
+  created: function(){
+
   }
 }
 </script>
