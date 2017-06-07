@@ -2,6 +2,10 @@
 
 展示gank.io的每日精选内容, api来自http://gank.io/api
 
+## 单页面版本
+
+去掉了vue-router的依赖
+
 ## Build Setup
 
 ``` bash
