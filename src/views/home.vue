@@ -114,7 +114,7 @@
       getInfo: function () {
 //        显示加载
 
-        let oriUrl = 'http://gank.io/api/day/';
+        let oriUrl = 'https://gank.io/api/day/';
         let requestUrl = oriUrl + this.dateTime.year + '/' + +this.dateTime.month + '/' + this.dateTime.day;
         this.isLoading = true;
         this.$http.get(requestUrl).then(function (resp) {
