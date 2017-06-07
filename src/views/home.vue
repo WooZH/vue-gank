@@ -163,7 +163,6 @@
           this.dateTime.year--;
           this.dateTime.month = 12;
           this.dateTime.day = 31
-          alert(this.dateTime.day)
         }
         else
         {
@@ -171,22 +170,17 @@
             if(month == 2 ||month == 4 ||month == 8 ||month == 9 ||month == 11){
               this.dateTime.month--;
               this.dateTime.day = 31
-              alert(111)
 
             }
             else if(month == 3){
               if(year%4==0 ||year%400==0){
                 this.dateTime.month--;
                 this.dateTime.day = 29
-                alert(222)
-
 
               }else{
                 this.dateTime.month--;
 
                 this.dateTime.day = 28
-                alert(333)
-
 
               }
             }
@@ -205,11 +199,11 @@
       },
       setShowDate: function (year,month,day){
         var showMonth,showDay;
-        if (month < 10)
+        if (month < 10 && month.length < 2)
           showMonth = '0' + month;
         else
           showMonth = month
-        if (day < 10)
+        if (day < 10 && day.length < 2)
           showDay = '0' + day;
         else
           showDay = day
