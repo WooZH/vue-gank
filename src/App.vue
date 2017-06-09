@@ -13,6 +13,7 @@ export default {
   components: {
     Home
   },
+
   created: function(){
 
   }

@@ -10,6 +10,15 @@ import home from './views/home.vue';
 //Vue.use(VueRouter);
 Vue.use(vueResource);
 
+Vue.filter('moment', function (value) {
+  if (value)
+    return value.split('T')[0] + ' ' + value.split('T')[1].split('.')[0];
+  else
+    return value
+})
+Vue.filter('resizeMD', function (value) {
+  return value + '?imageView2/0/w/375'
+})
 // 开启debug模式
 Vue.config.debug = true;
 // 让 vue-resource 使用 content-type urlencode 的格式进行ajax请求

@@ -4,7 +4,7 @@
       <span @click="goHome">{{title}}</span>
 
       <span v-if="date" class="date">{{date}} </span>
-      <span class="about" @click="goAbout">♕</span>
+      <!--<span class="about" @click="goAbout">♕</span>-->
     </p>
   </div>
 </template>
@@ -46,7 +46,7 @@
     left: 0;
 
     width: px2rem(720px);
-    height: px2rem(130px);
+    height: px2rem(90px);
 
     background-color: #2aba88;
   }
@@ -54,7 +54,7 @@
   .top-title {
     text-align: left;
     font-size: 22px;
-    line-height: px2rem(130px);
+    line-height: px2rem(90px);
     color: #ffffff;
 
     .about{

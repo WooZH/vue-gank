@@ -1,5 +1,93 @@
-body {
+@charset "UTF-8";
+/*
+  公用的颜色和长度等单位 minxin function等 放在这里, 每个组件的scss文件都可以引用,不会被打包进最终的css
+*/
+/*
+  px 转换 rem
+*/
+/*
+  根据屏幕dpr改变字体大小
+*/
+/*
+  根据不同dpr切换不同清晰度图片 常规 2x 和 3x
+*/
+.table {
+  width: 100%;
+  max-width: 100%; }
+
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd; }
+
+th {
+  font-weight: bold;
+  text-align: center; }
+
+td, th {
+  display: table-cell;
+  vertical-align: inherit; }
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit; }
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit; }
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  text-align: center;
+  border-top: 1px solid #ddd; }
+
+html {
   background: #f2f2f2;
   color: #212121; }
+
+li {
+  user-select: none; }
+
+.card {
+  width: 9.54667rem;
+  margin: 0.2rem;
+  background: #fff;
+  height: auto;
+  border-radius: 0.02667rem;
+  word-wrap: break-word;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24); }
+  .card .card-title {
+    width: 9.14667rem;
+    height: 100%;
+    padding: 0.2rem;
+    font-size: 16px;
+    font-weight: bolder;
+    border-bottom: 1px solid #e0e0e0; }
+  .card .card-info {
+    width: 9.14667rem;
+    height: 100%;
+    padding: 0.2rem;
+    border-bottom: 1px solid #e0e0e0; }
+    .card .card-info :last-child {
+      border-bottom: 0; }
+    .card .card-info .card-desc {
+      font-size: 150%;
+      line-height: 150%; }
+    .card .card-info .card-date {
+      font-size: 100%;
+      line-height: 150%; }
+    .card .card-info .card-from {
+      font-size: 100%;
+      line-height: 150%;
+      color: #888888;
+      margin-top: 0.13333rem; }
+    .card .card-info .card-author {
+      font-size: 100%;
+      line-height: 120%;
+      margin-top: 0.06667rem;
+      color: #888888; }
 
 /*# sourceMappingURL=index.css.map */
