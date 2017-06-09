@@ -83,6 +83,11 @@ li {
       font-size: 100%;
       line-height: 150%;
       color: #888888;
+      margin-top: 0.06667rem; }
+    .card .card-info .card-type {
+      font-size: 100%;
+      line-height: 150%;
+      color: #888888;
       margin-top: 0.13333rem; }
     .card .card-info .card-author {
       font-size: 100%;

@@ -135,14 +135,26 @@ tr {
   opacity: 1; }
 
 .up-enter-active, .up-leave-active {
-  transition: all 0.6s; }
+  transition: all 1.2s; }
 
 .up-enter, .up-leave-active {
-  transform: translateX(2.4rem);
+  transform: rotate(360deg);
   opacity: 0; }
 
 .up-enter {
+  opacity: 0;
+  transform: rotate(-120deg); }
+
+.down-enter-active, .down-leave-active {
+  transition: all 0.6s; }
+
+.down-enter, .down-leave-active {
+  transform: translateY(-0.93333rem);
   opacity: 0; }
+
+.down-enter {
+  opacity: 0;
+  transform: translateY(-0.93333rem); }
 
 .transX-enter-active, .transX-leave-active {
   transition: all 0.6s; }
@@ -194,11 +206,17 @@ tr {
 .icon {
   display: inline-block;
   width: 100%;
-  height: 100%; }
+  height: 0.53333rem;
+  line-height: 0.53333rem;
+  vertical-align: middle;
+  font-size: 18px; }
 
 .icon2 {
   position: relative;
-  top: 0rem; }
+  top: 0rem;
+  line-height: 0.53333rem;
+  vertical-align: middle;
+  font-size: 18px; }
 
 .ptr--ptr {
   box-shadow: 0 !important; }
@@ -232,5 +250,27 @@ nav {
     transition: all 0.2s;
     color: #fff;
     background: #2ad49e; }
+
+.fuli {
+  width: 100%; }
+
+.fuli-card {
+  padding: 0.13333rem 0.13333rem 0.26667rem 0.13333rem; }
+  .fuli-card .fuli-img {
+    margin-bottom: 0.4rem; }
+
+.toTop-button {
+  position: fixed;
+  right: 1.26667rem;
+  bottom: 0.46667rem;
+  width: 0.93333rem;
+  height: 0.93333rem;
+  border-radius: 50%;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+  background-color: rgba(255, 255, 255, 0.89);
+  font-size: 16px;
+  line-height: 0.93333rem;
+  text-align: center;
+  color: rgba(18, 18, 18, 0.99); }
 
 /*# sourceMappingURL=home.css.map */

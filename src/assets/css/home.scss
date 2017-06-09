@@ -130,16 +130,28 @@ $theme-color: #2aba88;
 }
 
 .up-enter-active, .up-leave-active {
-  transition: all .6s
+  transition: all 1.2s
 }
 .up-enter, .up-leave-active {
-  transform: translateX(px2rem(180px));
+  transform: rotate(360deg);
   opacity: 0;
 }
 
 .up-enter{
   opacity: 0;
+  transform: rotate(-120deg);
+}
+.down-enter-active, .down-leave-active {
+  transition: all .6s
+}
+.down-enter, .down-leave-active {
+  transform: translateY(px2rem(-70px));
+  opacity: 0;
+}
 
+.down-enter{
+  opacity: 0;
+  transform: translateY(px2rem(-70px));
 }
 
 .transX-enter-active, .transX-leave-active {
@@ -217,13 +229,20 @@ $theme-color: #2aba88;
 .icon{
   display: inline-block;
   width: 100%;
-  height: 100%;
+  height: px2rem(40px);
+  line-height: px2rem(40px);
+  vertical-align: middle;
+  font-size: 18px;
 }
 
 .icon2{
   position: relative;
   top:px2rem(0);
+  line-height: px2rem(40px);
+  vertical-align: middle;
+  font-size: 18px;
 }
+
 // refresh
 .ptr--ptr{
   box-shadow: 0 !important;
@@ -271,3 +290,36 @@ nav{
   }
 }
 
+
+.fuli{
+  width: 100%;
+}
+
+.fuli-card{
+  padding: px2rem(10px) px2rem(10px) px2rem(20px) px2rem(10px);
+
+  .fuli-img{
+    margin-bottom: px2rem(30px);
+  }
+}
+
+.toTop-button{
+  position: fixed;
+
+  right: px2rem(95px);
+  bottom: px2rem(35px);
+
+  width: px2rem(70px);
+  height: px2rem(70px);
+
+  border-radius: 50%;
+  box-shadow: 0 -1px 0 #e0e0e0,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+
+  background-color: rgba(255, 255, 255, 0.89);
+
+  font-size: 16px;
+  line-height: px2rem(70px);
+  text-align: center;
+  color: rgba(18, 18, 18, 0.99);
+
+}

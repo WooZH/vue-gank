@@ -33,7 +33,7 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(42, 186, 136, 1);
+    background-color: rgba(42, 186, 136, 0.1);
     display: table;
   }
 

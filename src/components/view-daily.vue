@@ -36,7 +36,9 @@
     },
     props: ['viewData'],
     methods: {
-
+      goTo: function (url) {
+        window.location.href = url;
+      },
     },
     created: function(){
       console.log(this.viewData);
@@ -59,8 +61,4 @@
     margin-bottom: px2rem(30px);
   }
   }
-
-
-
-
 </style>
